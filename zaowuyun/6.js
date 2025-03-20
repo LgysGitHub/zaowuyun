@@ -26,7 +26,7 @@ const sumFn = (s) => {
     }else{
       let num = 0
       while(i < len && !isNaN(Number(s[i])) && s[i] !== ' '){
-        num = num * 10 + s[i].charCodeAt() - '0'.charCodeAt()
+        num = num * 10 + Number(s[i])
         i++
       }
       sum += num * sign
@@ -36,5 +36,5 @@ const sumFn = (s) => {
   return sum
 }
 
-sumFn('1+1')
+sumFn('11+1')
 sumFn('2-1')
